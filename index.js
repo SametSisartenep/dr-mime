@@ -30,15 +30,12 @@ function getExt ( type ) {
   }
 }
 
-// type: e.g 'text/html'
-// extensions: e.g '.html', '.htm'
 function addType ( type, extension ) {
   mimes[extension] = type;
 }
 
-// typext: type or extension, you chose :P
-function removeType ( typext ) {
-
+function removeType ( type ) {
+  delete mimes[getExt(type)];
 }
 
 // Apache-like '.types' file
