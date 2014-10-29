@@ -1,5 +1,13 @@
 var mimes = require('mimes.json');
 
+var extensions = [
+  '.html', '.htm', '.stm', '.css', '.js', '.gtar', '.gz',
+  '.pdf', '.tar', '.tgz', '.z', '.zip', '.gif', '.ico',
+  '.jpe', '.jpeg', '.jpg', '.svg', '.tif', '.tiff',
+  '.png', '.mid', '.rmi', '.mp3', '.wav', '.mov',
+  '.mp2', '.mpa', '.mpe', '.mpeg', '.mpg', '.qt'
+];
+
 function getType ( extension ) {
   return mimes[extension];
 }
@@ -36,5 +44,5 @@ function removeType ( typext ) {
 // Apache-like '.types' file
 // E.g: https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
 function loadTypesFile ( file ) {
-  
+
 }
