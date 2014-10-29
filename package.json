@@ -1,0 +1,23 @@
+{
+  "name": "dr-mime",
+  "version": "0.0.1",
+  "description": "Node.js module for handling mime types.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SametSisartenep/dr-mime.git"
+  },
+  "keywords": [
+    "mime",
+    "mime-types"
+  ],
+  "author": "Rodrigo González López",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SametSisartenep/dr-mime/issues"
+  },
+  "homepage": "https://github.com/SametSisartenep/dr-mime"
+}
