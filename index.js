@@ -1,29 +1,39 @@
 var mimes = require('mimes.json');
 
-var extensions = [
-  '.html', '.htm', '.stm', '.css', '.js', '.gtar', '.gz',
-  '.pdf', '.tar', '.tgz', '.z', '.zip', '.gif', '.ico',
-  '.jpe', '.jpeg', '.jpg', '.svg', '.tif', '.tiff',
-  '.png', '.mid', '.rmi', '.mp3', '.wav', '.mov',
-  '.mp2', '.mpa', '.mpe', '.mpeg', '.mpg', '.qt'
-];
-
 function getType ( extension ) {
-  return mimes[extension];
+  mimes.map(function ( mime ) {
+    for (var i = 0; i < mime.extension.length; i++)
+    {
+      if (mime.extension[i] === extension)
+      {
+        return mime.type;
+      }
+    }
+  });
+  return 'text/plain';
 }
 
 function getExt ( type ) {
-  for (var i = 0; i < extensions.length; i++)
-  {
-    if (mimes[extensions[i]] === type)
+  mimes.map(function ( mime ) {
+    if (mime.type === type)
     {
-      return extensions[i];
+      return mime.extension[0];
     }
-  }
+  });
+  return false;
 }
 
 function addType ( type, extension ) {
-  mimes[extension] = type;
+  if (!getExt(type))
+  {
+    mimes.push({"type" : type, "extension" : [extension]});
+  }
+  else
+  {
+    mimes.map(function ( mime ) {
+      
+    }); 
+  }
 }
 
 function addExt ( type, extension ) {

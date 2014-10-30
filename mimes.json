@@ -1,28 +1,26 @@
-// TODO: mimes must index
 [
-  // CODE
   {"type" : "text/html", "extension" : [".html", ".htm", ".ht", ".stm"]},
   {"type" : "text/css", "extension" : [".css"]},
   {"type" : "application/javascript", "extension" : [".js"]},
-  // FILES
+
   {"type" : "application/x-gtar", "extension" : [".gtar"]},
   {"type" : "application/x-gzip", "extension" :  [".gz"]},
   {"type" : "application/x-pdf", "extension" : [".pdf"]},
   {"type" : "application/x-tar", "extension" : [".tar"]},
   {"type" : "application/x-compressed", "extension" : [".tgz", ".z"]},
   {"type" : "application/zip", "extension" : [".zip"]},
-  // IMAGE
+
   {"type" : "image/gif", "extension" : [".gif"]},
   {"type" : "image/x-icon", "extension" : [".ico"]},
   {"type" : "image/jpeg", "extension" : [".jpe", ".jpeg", ".jpg"]},
   {"type" : "image/svg+xml", "extension" : [".svg"]},
   {"type" : "image/tiff", "extension" : [".tif", ".tiff"]},
   {"type" : "image/png", "extension" : [".png"]},
-  // AUDIO
+
   {"type" : "audio/mid", "extension" : [".mid", ".rmi"]},
   {"type" : "audio/mpeg", "extension" : [".mp3"]},
   {"type" : "audio/x-wav", "extension" : [".wav"]},
-  // VIDEO
+
   {"type" : "video/quicktime", "extension" : [".mov", ".qt"]},
   {"type" : "video/mpeg", "extension" : [".mp2", ".mpa", ".mpe", ".mpeg", ".mpg"]}
 ]

@@ -7,7 +7,7 @@ Node.js module for handling mime types.
 
 `npm install dr-mime`
 
-_The [npm](http://npmjs.org) package isn't finished, 2 more coffees and it will be :P_
+![](http://www.rbhk.org.hk/images/warning.png) _The [npm](http://npmjs.org) package isn't finished, 2 more coffees and it will be :P_
 
 #### Use
 
