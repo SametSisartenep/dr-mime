@@ -29,7 +29,7 @@ _The [npm](http://npmjs.org) package isn't finished, 2 more coffees and it will 
 **.addType ( _mime-type, extension_ )**
 
 ``` js
-  DrMime.addType('.cc', 'text/plain');
+  DrMime.addType('text/plain', '.cc');
 ```
 
 **.addExt ( _mime-type, extension_ )**

@@ -1,40 +1,28 @@
 // TODO: mimes must index
-{
+[
   // CODE
-  ".html" : "text/html",
-  ".htm" : "text/html",
-  ".stm" : "text/html",
-  ".css" : "text/css",
-  ".js" : "application/javascript",
+  {"type" : "text/html", "extension" : [".html", ".htm", ".ht", ".stm"]},
+  {"type" : "text/css", "extension" : [".css"]},
+  {"type" : "application/javascript", "extension" : [".js"]},
   // FILES
-  ".gtar" : "application/x-gtar",
-  ".gz" : "application/x-gzip",
-  ".pdf" : "application/x-pdf",
-  ".tar" : "application/x-tar",
-  ".tgz" : "application/x-compressed",
-  ".z" : "application/x-compress",
-  ".zip" : "application/zip",
+  {"type" : "application/x-gtar", "extension" : [".gtar"]},
+  {"type" : "application/x-gzip", "extension" :  [".gz"]},
+  {"type" : "application/x-pdf", "extension" : [".pdf"]},
+  {"type" : "application/x-tar", "extension" : [".tar"]},
+  {"type" : "application/x-compressed", "extension" : [".tgz", ".z"]},
+  {"type" : "application/zip", "extension" : [".zip"]},
   // IMAGE
-  ".gif" : "image/gif",
-  ".ico" : "image/x-icon",
-  ".jpe" : "image/jpeg",
-  ".jpeg" : "image/jpeg",
-  ".jpg" : "image/jpeg",
-  ".svg" : "image/svg+xml",
-  ".tif" : "image/tiff",
-  ".tiff" : "image/tiff",
-  ".png" : "image/png",
+  {"type" : "image/gif", "extension" : [".gif"]},
+  {"type" : "image/x-icon", "extension" : [".ico"]},
+  {"type" : "image/jpeg", "extension" : [".jpe", ".jpeg", ".jpg"]},
+  {"type" : "image/svg+xml", "extension" : [".svg"]},
+  {"type" : "image/tiff", "extension" : [".tif", ".tiff"]},
+  {"type" : "image/png", "extension" : [".png"]},
   // AUDIO
-  ".mid" : "audio/mid",
-  ".rmi" : "audio/mid",
-  ".mp3" : "audio/mpeg",
-  ".wav" : "audio/x-wav",
+  {"type" : "audio/mid", "extension" : [".mid", ".rmi"]},
+  {"type" : "audio/mpeg", "extension" : [".mp3"]},
+  {"type" : "audio/x-wav", "extension" : [".wav"]},
   // VIDEO
-  ".mov" : "video/quicktime",
-  ".mp2" : "video/mpeg",
-  ".mpa" : "video/mpeg",
-  ".mpe" : "video/mpeg",
-  ".mpeg" : "video/mpeg",
-  ".mpg" : "video/mpeg",
-  ".qt" : "video/quicktime"
-}
+  {"type" : "video/quicktime", "extension" : [".mov", ".qt"]},
+  {"type" : "video/mpeg", "extension" : [".mp2", ".mpa", ".mpe", ".mpeg", ".mpg"]}
+]
