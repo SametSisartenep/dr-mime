@@ -12,20 +12,12 @@ function getType ( extension ) {
   return mimes[extension];
 }
 
-function getHeader ( extension ) {
-  return (mimes[extension] + '; charset=utf-8');
-}
-
 function getExt ( type ) {
-  var mimeType;
-
   for (var i = 0; i < extensions.length; i++)
   {
-    mimeType = mimes[extensions[i]];
-
-    if (mimeType === type)
+    if (mimes[extensions[i]] === type)
     {
-      return mimeType;
+      return extensions[i];
     }
   }
 }
@@ -34,12 +26,14 @@ function addType ( type, extension ) {
   mimes[extension] = type;
 }
 
+function addExt ( type, extension ) {
+
+}
+
 function removeType ( type ) {
   delete mimes[getExt(type)];
 }
 
-// Apache-like '.types' file
-// E.g: https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
-function loadTypesFile ( file ) {
+function removeExt ( extension ) {
 
 }

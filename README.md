@@ -7,22 +7,49 @@ Node.js module for handling mime types.
 
 `npm install dr-mime`
 
+_The [npm](http://npmjs.org) package isn't finished, 2 more coffees and it will be :P_
+
 #### Use
 
-Example: 
+**.getType ( _extension_ )**
 
 ``` js
-  var drMime = require('dr-mime'),
-    path = require('path'),
-    http = require('http');
+  var DrMime = require('dr-mime');
 
-  var file = 'example.html';
-  var mime = drMime.getType(path.extname(file));
+  DrMime.getType('.jpg'); // returns 'image/jpeg'
 
-  http.createServer(function ( req, res ) {
-    fs.readFile(file, function ( err, data ) {
-      res.writeHead(200, {'Content-Type': mime});
-      res.end(data);
-    });
-  }).listen(1377);
 ```
+
+**.getExt ( _mime-type_ )**
+
+``` js
+  DrMime.getExt('application/javascript'); // returns '.js'
+```
+
+**.addType ( _mime-type, extension_ )**
+
+``` js
+  DrMime.addType('.cc', 'text/plain');
+```
+
+**.addExt ( _mime-type, extension_ )**
+
+``` js
+  DrMime.addExt('image/jpeg', '.jpe');
+```
+
+**.removeType ( _mime-type_ )**
+
+``` js
+  DrMime.removeType('text/html'); // I recommend not to do this :)
+```
+
+**.removeExt ( _extension_ )**
+
+``` js
+  DrMime.removeExt('.html');
+```
+
+#### Finally...
+
+**Dr. Mime** is distributed under MIT License, feel free to use and modify it. ¯\_(ツ)_/¯
