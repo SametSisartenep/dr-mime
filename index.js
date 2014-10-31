@@ -1,4 +1,4 @@
-var mimes = require('mimes.json');
+var mimes = require('./mimes.json');
 
 module.exports = exports = {
   getType: function ( extension ) {
