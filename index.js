@@ -1,49 +1,61 @@
 var mimes = require('mimes.json');
 
-function getType ( extension ) {
-  mimes.map(function ( mime ) {
-    for (var i = 0; i < mime.extension.length; i++)
-    {
-      if (mime.extension[i] === extension)
+module.exports = exports = {
+  getType: function ( extension ) {
+    mimes.map(function ( mime ) {
+      for (var i = 0; i < mime.extension.length; i++)
       {
-        return mime.type;
+        if (mime.extension[i] === extension)
+        {
+          return mime.type;
+        }
+      }
+    });
+    return 'text/plain';
+  },
+  getExt: function ( type ) {
+    mimes.map(function ( mime ) {
+      if (mime.type === type)
+      {
+        return mime.extension[0];
+      }
+    });
+    return false;
+  },
+  add: function ( type, extension ) {
+    if (!getExt(type))
+    {
+      mimes.push({"type" : type, "extension" : [extension]});
+    }
+    else
+    {
+      mimes.map(function ( mime ) {
+        if (mime.type === type)
+        {
+          mime.extension.push(extension);
+        }
+      }); 
+    }
+  },
+  removeType: function ( type ) {
+    for (var i = 0; i < mimes.length; i++)
+    {
+      if (mimes[i].type === type)
+      {
+        mimes.splice(i, 1);
       }
     }
-  });
-  return 'text/plain';
-}
-
-function getExt ( type ) {
-  mimes.map(function ( mime ) {
-    if (mime.type === type)
+  },
+  removeExt: function ( extension ) {
+    for (var i = 0; i < mimes.length; i++)
     {
-      return mime.extension[0];
+      for (var j = 0; j < mimes[i].extension.length; j++)
+      {
+        if (mimes[i].extension[j] === extension)
+        {
+          mimes[i].extension.splice(j, 1);
+        }
+      }
     }
-  });
-  return false;
-}
-
-function addType ( type, extension ) {
-  if (!getExt(type))
-  {
-    mimes.push({"type" : type, "extension" : [extension]});
   }
-  else
-  {
-    mimes.map(function ( mime ) {
-      
-    }); 
-  }
-}
-
-function addExt ( type, extension ) {
-
-}
-
-function removeType ( type ) {
-  delete mimes[getExt(type)];
-}
-
-function removeExt ( extension ) {
-
-}
+};

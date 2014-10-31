@@ -26,16 +26,10 @@ Node.js module for handling mime types.
   DrMime.getExt('application/javascript'); // returns '.js'
 ```
 
-**.addType ( _mime-type, extension_ )**
+**.add ( _mime-type, extension_ )**
 
 ``` js
-  DrMime.addType('text/plain', '.cc');
-```
-
-**.addExt ( _mime-type, extension_ )**
-
-``` js
-  DrMime.addExt('image/jpeg', '.jpe');
+  DrMime.add('text/plain', '.cc');
 ```
 
 **.removeType ( _mime-type_ )**
