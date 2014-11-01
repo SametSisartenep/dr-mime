@@ -1,7 +1,11 @@
 Dr. Mime 
 =======
 
+<<<<<<< HEAD
 ![Crazy Doctor logo](crazy-doc.png)
+=======
+![Crazy Doctor logo](crazy-doc.svg)
+>>>>>>> a50753f5265bf04c4190535699b9044312bf7d9c
 
 Crazy doctor for mime types
 
