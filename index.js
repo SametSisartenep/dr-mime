@@ -2,28 +2,32 @@ var mimes = require('./mimes.json');
 
 module.exports = exports = {
   getType: function ( extension ) {
+    var type;
+
     mimes.map(function ( mime ) {
       for (var i = 0; i < mime.extension.length; i++)
       {
         if (mime.extension[i] === extension)
         {
-          return mime.type;
+          type = mime.type;
         }
       }
     });
-    return 'text/plain';
+    return type || 'text/plain';
   },
   getExt: function ( type ) {
+    var extension;
+
     mimes.map(function ( mime ) {
       if (mime.type === type)
       {
-        return mime.extension[0];
+        extension = mime.extension[0];
       }
     });
-    return false;
+    return extension || false;
   },
   add: function ( type, extension ) {
-    if (!getExt(type))
+    if (!this.getExt(type))
     {
       mimes.push({"type" : type, "extension" : [extension]});
     }
