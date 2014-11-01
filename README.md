@@ -1,7 +1,9 @@
-dr-mime
+Dr. Mime 
 =======
 
-Node.js module for handling mime types.
+![Crazy Doctor logo](crazy-doc.svg)
+
+Crazy doctor for mime types
 
 #### Installation
 
