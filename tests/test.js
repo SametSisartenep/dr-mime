@@ -14,6 +14,13 @@ describe('Core test', function () {
     });
   });
 
+  describe('getHeader() function', function () {
+    it('should return {\'Content-Type\':\'text/html\'} on getHeader(\'.html\' and \'text/html\')', function () {
+      assert.equal('text/html', (drMime.getHeader('.html')['Content-Type']));
+      assert.equal('text/html', (drMime.getHeader('text/html')['Content-Type']));
+    });
+  });
+
   describe('add() function', function () {
     it('should add new type \'sublime/subl\' and extension \'.subl\' on add(\'sublime/subl\', \'.subl\')', function () {
       drMime.add('sublime/subl', '.subl');

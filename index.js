@@ -26,10 +26,20 @@ module.exports = exports = {
     });
     return extension || false;
   },
+  getHeader: function ( typext ) {
+    if (typext.indexOf('/') !== -1)
+    {
+      return {'Content-Type' : typext};
+    }
+    else
+    {
+      return {'Content-Type' : this.getType(typext)};
+    }
+  },
   add: function ( type, extension ) {
     if (!this.getExt(type))
     {
-      mimes.push({"type" : type, "extension" : [extension]});
+      mimes.push({'type' : type, 'extension' : [extension]});
     }
     else
     {

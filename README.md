@@ -26,6 +26,12 @@ Crazy doctor for mime types
   DrMime.getExt('application/javascript'); // returns '.js'
 ```
 
+**.getHeader ( _mime-type_ OR _extension_ )**
+
+``` js
+  DrMime.getHeader('application/javascript'); // returns {'Content-Type' : 'application/javascript'}
+```
+
 **.add ( _mime-type, extension_ )**
 
 ``` js
