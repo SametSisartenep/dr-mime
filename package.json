@@ -1,7 +1,7 @@
 {
   "name": "dr-mime",
-  "version": "0.6.2",
-  "description": "Node.js module for handling mime types.",
+  "version": "0.6.3",
+  "description": "Crazy doctor for mime types.",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/test.js"
