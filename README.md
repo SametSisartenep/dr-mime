@@ -1,7 +1,7 @@
 Dr. Mime 
 =======
 
-![crazy doctor logo](crazy-doc.png)
+![crazy doctor logo](logo-800x620.png)
 
 Crazy doctor for mime types
 
